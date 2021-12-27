@@ -60,8 +60,16 @@
             color: #fec51c;
         }
 
-        main > section > img{
-            
+        main > section:nth-child(1) > #img1{
+            width: 100%;
+        }
+
+        main > section:nth-child(1) > aside{
+            position: absolute;
+            right: 188px;
+            left: 300px;
+            top: 96px;
+            color: white;
         }
 
     </style>
@@ -84,7 +92,7 @@
 
 <main>
     <section>
-        <img src="assets/images/photo-1605379399642-870262d3d051.jpg" alt="loading error">
+        <img id="img1" src="assets/images/photo-1605379399642-870262d3d051.jpg" alt="loading error">
         <img src="assets/images/WhatsApp%20Image%202021-11-07%20at%2010.42.06%20PM.jpeg" alt="This image is corrupt">
         <aside>
             <h1>I AM A{SOFTWARE ENGINEER}</h1>
