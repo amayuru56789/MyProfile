@@ -1,0 +1,111 @@
+body > header {
+    position: sticky;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(37, 37, 37);
+}
+
+header > img{
+    margin: auto;
+    width: 150px;
+}
+
+body > header > nav{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: inline;
+}
+
+body > header > nav > ul{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    list-style: none;
+    display: ruby;
+}
+
+/*body > header > h1{
+    margin: 0;
+}*/
+
+.list{
+    padding: 0 10px 0 10px;
+    font-family: 'Ubuntu', sans-serif;;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+body > header > nav > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+body > header > nav > ul > li > a:hover{
+    color: #fec51c;
+}
+
+main > section:nth-child(1) > #img1{
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+main > section:nth-child(1) > aside{
+    position: absolute;
+    right: 188px;
+    left: 300px;
+    top: 96px;
+    color: white;
+}
+
+main > section:nth-child(1) > aside > h1{
+    width: 520px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main > section:nth-child(1) > aside > h4{
+    margin-left: -15px;
+    width: 523px;
+    color: #45e5e5;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main > section:nth-child(1) > aside > pre{
+    margin: auto;
+    padding-right: 146px;
+    width: 523px;
+    font-family: 'Quando', serif;
+}
+
+/*
+main > section:nth-child(1) > img{
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}*/
+
+main > section:nth-child(1) > #btnlike{
+    position: absolute;
+    top: 482px;
+    bottom: 0px;
+    right: 0;
+    left: 220px;
+    color: wheat;
+}
+
+main > section:nth-child(1) > pre{
+    position: absolute;
+    top: 535px;
+    bottom: 0px;
+    right: 0;
+    left: 186px;
+    color: wheat;
+    width: 246px;
+}
