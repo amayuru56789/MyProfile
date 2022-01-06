@@ -5,6 +5,28 @@ body > header {
     background-color: rgb(37, 37, 37);
 }
 
+.banner{
+    position: relative;
+}
+
+.banner{
+   /* content: "";
+    display: block;
+    background-color: #333;
+    background-image: linear-gradient(to right, #eaee, #33d0ff);
+    !*position: absolute;*!
+    top: 0;
+    bottom: 0;
+    opacity: .7;
+    z-index: 0;
+    mix-blend-mode: hard-light;*/
+}
+
+/*.banner > *{
+    z-index: 10;
+    position: relative;
+}*/
+
 header > img{
     margin: auto;
     width: 150px;
@@ -16,6 +38,7 @@ body > header > nav{
     top: 0;
     bottom: 0;
     display: inline;
+    width: 653px;
 }
 
 body > header > nav > ul{
@@ -59,7 +82,8 @@ main > section:nth-child(1) > aside{
     position: absolute;
     right: 188px;
     left: 300px;
-    top: 96px;
+    /*top: 96px;*/
+    top: 13px;
     color: white;
 }
 
@@ -108,4 +132,28 @@ main > section:nth-child(1) > pre{
     left: 186px;
     color: wheat;
     width: 246px;
+}
+
+main > section:nth-child(2) > h1{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 585px;
+    right: 0px;
+    width: 300px;
+    height: 53px;
+}
+
+main > section:nth-child(2) > .sec_flex{
+    height: 300px;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 51px;
+}
+
+main > section:nth-child(2) > .sec_flex > div{
+    border: 2px solid red;
+    border-radius: 10px;
 }
