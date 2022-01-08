@@ -188,3 +188,118 @@ main > section:nth-child(2) > .sec_flex > div{
 .sec_flex > div:hover:before{
     opacity: 1;
 }
+
+body > footer{
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    height: 500px;
+}
+
+body > footer > address > h1{
+    width: 403px;
+    position: relative;
+    margin-left: 99px;
+    padding: 79px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body > footer > address > #cm_h1{
+    width: 403px;
+    position: absolute;
+    text-align: end;
+    left: 455px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body > footer > address > #gt_h2{
+    width: 403px;
+    position: absolute;
+    text-align: end;
+    left: 612px;
+    right: 0;
+    bottom: 0;
+    top: 157px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body > footer > address > h2{
+    width: 403px;
+    position: absolute;
+    text-align: end;
+    top: 290px;
+    bottom: 0;
+    right: 0;
+    left: 513px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body > footer > address > div{
+    border: 1px solid red;
+    width: 370px;
+    /*height: 360px;*/
+    height: 195px;
+    border-radius: 30px;
+    position: absolute;
+    top: 183px;
+    bottom: 0;
+    left: 164px;
+    right: 0;
+    /*background-size: cover;*/
+}
+
+body > footer > address > div > #adr_img{
+    border-radius: 10px;
+    background-size: cover;
+}
+
+body > footer > address > #p_mail{
+    width: 403px;
+    position: absolute;
+    text-align: end;
+    left: 685px;
+    right: 0;
+    bottom: 0;
+    top: 212px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body > footer > address > #p_yahoo{
+    width: 403px;
+    position: absolute;
+    text-align: end;
+    left: 735px;
+    right: 0;
+    bottom: 0;
+    top: 250px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body > footer > address > small{
+    position: absolute;
+    text-align: center;
+    top: 460px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 16px;
+}
+
+body > footer > address > .icon{
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
