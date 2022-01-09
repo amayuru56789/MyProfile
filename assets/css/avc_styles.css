@@ -78,6 +78,15 @@ main > section:nth-child(1) > #img1{
     overflow: hidden;
 }
 
+main > section:nth-child(1) > #mypic{
+    background-size: cover;
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    left: 122px;
+    right: 0;
+}
+
 main > section:nth-child(1) > aside{
     position: absolute;
     right: 188px;
@@ -187,6 +196,170 @@ main > section:nth-child(2) > .sec_flex > div{
 
 .sec_flex > div:hover:before{
     opacity: 1;
+}
+
+main > section:nth-child(3) > #img2{
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+main > section:nth-child(3) > h1{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+main > section:nth-child(3) > div{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background: #333;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    z-index: 0;
+    transition: 1s ease-out;
+}
+
+main > section:nth-child(3) > div > img{
+    /*margin: 43px;*/
+    margin-top: 43px;
+    margin-left: 25px;
+}
+
+main > section:nth-child(3) > div > .margin{
+    /*margin: 43px;*/
+    margin-top: 26px;
+    margin-left: 25px;
+}
+
+main > section:nth-child(3) > #edu1{
+    position: absolute;
+    top: 580px;
+    bottom: 0;
+    right: 0;
+    /*left: 310px;*/
+    left: 526px
+}
+
+main > section:nth-child(3) > #edu2{
+    position: absolute;
+    /*top: 143px;*/
+    top: 115px;
+    bottom: 0;
+    right: 0;
+    left: 1080px;
+}
+
+main > section:nth-child(3) > #edu3{
+    position: absolute;
+    /*top: 327px;*/
+    top: 260px;
+    bottom: 0;
+    right: 0;
+    /*left: 928px;*/
+    left: 885px;
+}
+
+main > section:nth-child(3) > #edu4{
+    position: absolute;
+    /*top: 469px;*/
+    top: 426px;
+    bottom: 0;
+    right: 0;
+    /*left: 650px;*/
+    left: 700px;
+}
+
+main > section:nth-child(3) > dl{
+    position: absolute;
+    /*top: 0;*/
+    top: 172px;
+    bottom: 0;
+    /*left: 0;*/
+    left: 500px;
+    right: 0;
+    color: white;
+    width: 544px;
+    height: 180px;
+}
+
+main > section:nth-child(3) > dl > dt:nth-child(1){
+    position: relative;
+    top: -10px;
+    bottom: 0;
+    left: 228px;
+    right: 0;
+}
+
+main > section:nth-child(3) > dl > #ijse_dd{
+    position: relative;
+    top: -7px;
+    bottom: 0;
+    right: 0;
+    left: 188px;
+}
+
+main > section:nth-child(3) > dl > dt:nth-child(3){
+    position: relative;
+    /*top: 157px;*/
+    top: 102px;
+    bottom: 0;
+    /*left: 128px;*/
+    left: 84px;
+    right: 0;
+}
+
+main > section:nth-child(3) > dl > #GCE_dd{
+    position: relative;
+    /*top: 156px;*/
+    top: 99px;
+    bottom: 0;
+    right: 0;
+    /*left: 89px;*/
+    left: 45px;
+}
+
+main > section:nth-child(3) > dl > dt:nth-child(5){
+    position: relative;
+    /*top: 259px;*/
+    top: 229px;
+    bottom: 0;
+    /*left: -182px;*/
+    left: -140px;
+    right: 0;
+}
+
+main > section:nth-child(3) > dl > #vta_dd{
+    position: relative;
+    /*top: 259px;*/
+    top: 230px;
+    bottom: 0;
+    right: 0;
+    /*left: -222px;*/
+    left: -180px;
+}
+
+main > section:nth-child(3) > dl > dt:nth-child(7){
+    position: relative;
+    top: 340px;
+    bottom: 0;
+    left: -450px;
+    right: 0;
+}
+
+main > section:nth-child(3) > dl > #kcc_dd{
+    position: relative;
+    top: 341px;
+    bottom: 0;
+    right: 0;
+    left: -490px;
 }
 
 body > footer{
