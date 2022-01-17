@@ -4,6 +4,12 @@
 
 ![Image of Amayuru](assets/images/WhatsApp%20Image%202021-11-07%20at%2010.42.06%20PM.jpeg)
 
+- **Home Page**
+![Home Page Img](assets/ScreenShots/homepage%20img.PNG)
+
+- **My Skills Section**
+![Skill Section Img](assets/ScreenShots/skills%20sec.PNG)
+
 ## :link: **Links**
 - Website : [avc](https://amayuru5678.000webhostapp.com/)
 - GitHub Profile : [amayuru56789.github.io](https://amayuru56789.github.io/MyProfile/)
