@@ -474,11 +474,69 @@ main > section:nth-child(5) > div:nth-child(3){
 
 
 body > footer{
-    position: relative;
+    /*position: relative;
     background: rgba(0, 0, 0, 0.7);
-    height: 500px;
+    height: 500px;*/
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: #111;
 }
 
+div > h2{
+    color: white;
+}
+
+span{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+body > footer > .main-cont{
+    display: flex;
+}
+
+body > footer > .main-cont .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+body > footer > .main-cont .box h2{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+}
+
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a{
+    padding: 0 2px;
+}
+
+.left .content .social a i{
+    height: 40px;
+    width: 40px;
+    background: #1a1a1a;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.left .content .social a i:hover{
+    background: #f12020;
+}
+/*
 body > footer > address > h1{
     width: 403px;
     position: relative;
@@ -527,7 +585,7 @@ body > footer > address > h2{
 body > footer > address > div{
     border: 1px solid red;
     width: 370px;
-    /*height: 360px;*/
+    !*height: 360px;*!
     height: 195px;
     border-radius: 30px;
     position: absolute;
@@ -535,7 +593,7 @@ body > footer > address > div{
     bottom: 0;
     left: 164px;
     right: 0;
-    /*background-size: cover;*/
+    !*background-size: cover;*!
 }
 
 body > footer > address > div > #adr_img{
@@ -586,4 +644,4 @@ body > footer > address > .icon{
     bottom: 0;
     right: 0;
     left: 0;
-}
+}*/
