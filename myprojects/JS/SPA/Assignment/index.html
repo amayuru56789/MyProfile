@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uresha POS System by avc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link href="assets/fonts/css/all.css" rel="stylesheet">
+</head>
+<body>
+<header class="shadow-lg mb-3">
+
+    <!--    <nav>
+            <div>
+                <img src="" alt="loading error">
+            </div>
+
+            <div>
+                <ul class="d-flex flex-row bd-highlight mb-3">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Parts</a></li>
+                </ul>
+            </div>-->
+    <!--</nav>-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/pos-system-icon-0.png" alt="" width="50.3125" height="47.1976">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a id="home-click" class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="order-click" class="nav-link" href="#">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="item-click" class="nav-link" href="#">
+                            Items
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="customer-click" class="nav-link active" aria-current="page" href="#">Customer</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-user-plus"></i>Sign Up</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-sign-out-alt"></i>Log out</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+    <section id="home" >
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/images.jpeg" class="d-block w-100" alt="..." height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/istockphoto-1185198184-612x612.jpg" class="d-block w-100 h-75" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/smartcash_pos_smartcash_rms.webp" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section id="customer">
+
+        <div class="rounded-3 p-3" style="background-color: #DDE4F0; margin-top: 30px; height: 85vh">
+            <h1 class="text-lg-start mb-3"><i class="fas fa-users"></i>Customer</h1>
+
+            <div class="row align-items-start pb-3">
+                <div class="col-4">
+                    <h4>Customer Search</h4>
+                    <div class="input-group mb-3 style=height: 10px">
+                        <input type="text" class="form-control" placeholder="Input Name/NIC/Tp Here" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-success" type="button" id="button-addon2">
+                            <i class="bi bi-search m-2"></i>Search</button>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="btn-danger">Delete</button>
+                    <button class="btn-primary">Details</button>
+                    <button class="btn-success">Clear</button>
+                </div>
+            </div>
+
+            <div class="row align-items-end pb-3">
+                <div class="col-5">
+                    <button type="button" class="btn btn-primary btn-sm">New Customer</button>
+                    <button type="button" class="btn btn-secondary btn-sm">View All Customers</button>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div><h4>New Customer</h4></div>
+                <div class="col">
+                    <caption>Customer ID:</caption>
+                    <form>
+                        <input class="form-control " type="text">
+                    </form>
+                </div>
+                <div class="col">
+                    <caption>Customer Name:</caption>
+                    <form>
+                        <input class="form-control " type="text">
+                    </form>
+                </div>
+                <div class="col">
+                    <caption>Customer Address:</caption>
+                    <form>
+                        <input class="form-control " type="text">
+                    </form>
+                </div>
+                <div class="col">
+                    <caption>Customer Salary:</caption>
+                    <form>
+                        <input class="form-control " type="text">
+                    </form>
+                </div>
+            </div>
+
+            <div class="container mb-3">
+                <div class="row">
+                    <div class="col mt-lg-4">
+                        <button class="btn btn-danger">Save</button>
+                        <button class="btn btn-warning">Renew</button>
+                        <button class="btn btn-info">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-12 mt-2">
+                    <table class="table table-dark table-striped table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Tp</th>
+                            <th scope="col">Salary</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>C003</td>
+                            <td>Malitha</td>
+                            <td>Panadura</td>
+                            <td>10000.00</td>
+                        </tr>
+                        <tr>
+                            <td>C004</td>
+                            <td>Siripala</td>
+                            <td>Galle</td>
+                            <td>24000.00</td>
+                        </tr>
+                        <tr>
+                            <td>C005</td>
+                            <td>Jinadasa</td>
+                            <td>Panadura</td>
+                            <td>94000.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="item" >
+
+        <div class="rounded-3 p-3" style="background-color: #DDE4F0; margin-top: 30px; height: 85vh">
+            <h1 class="text-lg-start mb-3"><i class="fas fa-cubes"></i>Item</h1>
+
+            <div class="row align-items-center pb-3 justify-content-between">
+                <div class="col-4">
+                    <h4>Item Search</h4>
+                    <div class="input-group mb-3 style=height: 10px">
+                        <input type="text" class="form-control" placeholder="Input Item Name/Code Here" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-success" type="button" id="button-addon3">
+                            <i class="bi bi-search m-2"></i>Search</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn-danger">Delete</button>
+                    <button class="btn-primary">Details</button>
+                    <button class="btn-success">Clear</button>
+                </div>
+            </div>
+
+            <div class="row align-items-end pb-3">
+                <div class="col-5">
+                    <button type="button" class="btn btn-primary btn-sm">New Item</button>
+                    <button type="button" class="btn btn-secondary btn-sm">View All Items</button>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div><h4>New Item</h4></div>
+                <div class="col">
+                    <caption>Item Code:</caption>
+                    <form>
+                        <input class="form-control " type="text">
+                    </form>
+                </div>
+                <div class="col">
+                    <caption>Item Name:</caption>
+                    <form>
+                        <input class="form-control " type="text">
+                    </form>
+                </div>
+                <div class="col">
+                    <caption>Item Price:</caption>
+                    <form>
+                        <input class="form-control " type="text">
+                    </form>
+                </div>
+                <div class="col">
+                    <caption>Item Quantity:</caption>
+                    <form>
+                        <input class="form-control " type="text">
+                    </form>
+                </div>
+            </div>
+
+            <div class="container mb-3">
+                <div class="row">
+                    <div class="col mt-lg-4">
+                        <button class="btn btn-danger">Save</button>
+                        <button class="btn btn-warning">Renew</button>
+                        <button class="btn btn-info">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-12 mt-2">
+                    <table class="table table-dark table-striped table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Item Code</th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>I001</td>
+                            <td>Keerisamba 5Kg</td>
+                            <td>525.00</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>I002</td>
+                            <td>Parippu 2Kg</td>
+                            <td>200.00</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>I003</td>
+                            <td>Samba</td>
+                            <td>200.00</td>
+                            <td>1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="order" class="container-fluid">
+        <div class="alert alert-secondary" role="alert">
+            <i class="fas fa-shopping-bag"></i> Place Order
+        </div>
+
+        <!--main Container-->
+        <section class="container-fluid bg-light">
+            <!--Order Placing Row-->
+            <section class="row">
+                <!--       Col 1 As Invoices Details-->
+                <div class="col bg-white m-4 pb-4">
+
+                    <!-- Internal Grid           -->
+                    <section class="container">
+                        <!--Row 01-->
+                        <div class="row">
+                            <div class="bg-black-75 mb-3 p-2"><h4>Invoice Details</h4></div>
+                            <div class="col">
+                                <caption>Order ID:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                            <div class="col">
+                                <caption>Date:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+
+                        </div>
+                        <!--Row 02-->
+                        <div class="row">
+                            <div class="col">
+                                <caption>Customer:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                            <div class="col">
+                                <caption>Customer ID:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+
+                        </div>
+                        <!--Row 03-->
+                        <div class="row">
+                            <div class="col">
+                                <caption>Name:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                            <div class="col">
+                                <caption>Salary:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+
+                        </div>
+                        <!--Row 04-->
+                        <div class="row">
+                            <div class="col">
+                                <caption>Address:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!--       Col 2 As Item Select-->
+                <div class="col bg-white m-4 pb-4">
+
+                    <!--Container For Item Select Grid-->
+                    <section class="container">
+                        <!--Row 01-->
+                        <div class="row">
+                            <div class="bg-black-75 mb-3 p-2"><h4>Item Select</h4></div>
+                            <div class="col">
+                                <caption>Item:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                            <div class="col">
+                                <caption>Item Code:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                        </div>
+
+                        <!--Row 02-->
+                        <div class="row">
+                            <div class="col">
+                                <caption>Item Name:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                            <div class="col">
+                                <caption>Price:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                            <div class="col">
+                                <caption>QtyOnH:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <!--Row 03-->
+                        <div class="row">
+                            <div class="col">
+                                <caption>Order Quantity:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                        </div>
+
+                        <!--Row 04-->
+                        <div class="row align-items-end">
+                            <div class="col-12 mt-lg-4">
+                                <button class="btn btn-danger">Add Item</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+                <!--       Col 1 As Price Total-->
+                <div class="col bg-white m-4 pb-4">
+                    <h4 class="text-primary">Total: 1050Rs./=</h4>
+                    <h4 class="text-danger">SubTotal: 945Rs./=</h4>
+                    <!-- Internal Grid-->
+                    <section class="container">
+                        <!--Row 01-->
+                        <div class="row">
+                            <div class="col">
+                                <caption>Cash:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                            <div class="col">
+                                <caption>Discount:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <!--Row 02-->
+                        <div class="row">
+                            <div CLASS="col">
+                                <caption>Balance:</caption>
+                                <form>
+                                    <input class="form-control " type="text">
+                                </form>
+                            </div>
+                        </div>
+
+                        <!--Row 03-->
+                        <div class="row align-items-center">
+                            <div class="col-12 mt-lg-4">
+                                <button class="btn btn-success">Purchase</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!-- ####################  -->
+
+            <!--Table Row-->
+            <section class="row p-3 mb-5">
+                <div class="col">
+                    <table class="table table-dark table-striped table-bordered table-hover">
+                        <thead class="table-warning">
+                        <tr class="table-dark">
+                            <th scope="col">Item Code</th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">P001</th>
+                            <td>Keerisamba 5Kg</td>
+                            <td>525.00</td>
+                            <td>2</td>
+                            <td>1050</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">P002</th>
+                            <td>Parippu 2Kg</td>
+                            <td>200.00</td>
+                            <td>1</td>
+                            <td>200</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+        </section>
+    </section>
+
+</main>
+
+<script src="assets/js/script.js"></script>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
