@@ -512,6 +512,25 @@ body > footer > .main-cont .box h2{
 
 .box .content{
     margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .content:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+}
+
+.box .content:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #f12020;
+    top: -10px;
 }
 
 .left .content .social{
@@ -535,6 +554,93 @@ body > footer > .main-cont .box h2{
 
 .left .content .social a i:hover{
     background: #f12020;
+}
+
+.center .content .fas{
+    font-size: 1.4375rem;
+    background: #1a1a1a;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover{
+    background: #f12020;
+}
+
+.center .content .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .phone{
+    margin: 10px 0;
+}
+
+.right form .text{
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: #656565;
+}
+
+.right form .msg{
+    margin-top: 10px;
+}
+
+.right .text{
+    color: white;
+}
+
+.right form input, .right form textarea{
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+
+.right form input:focus, .right form textarea:focus{
+    outline-color: #3498db;
+}
+
+.right form input{
+    height: 35px;
+}
+
+.right form .btn{
+    margin-top: 10px;
+}
+
+.right form .btn button{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    background: #f12020;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.right form .btn button:hover{
+    background:  #000;
+}
+
+.bottom center{
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #151515;
+}
+
+.bottom center span{
+    color: #656565;
 }
 /*
 body > footer > address > h1{
@@ -645,3 +751,17 @@ body > footer > address > .icon{
     right: 0;
     left: 0;
 }*/
+
+@media screen and (max-width: 900px){
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    .main-cont{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-cont .box{
+        margin: 5px 0;
+    }
+}
