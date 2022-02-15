@@ -72,6 +72,24 @@ document.getElementById("btnAdd").addEventListener("click", function (){
     /*select the body and added the row */
     //document.getElementById("customerTable").append(row);
     $("#customerTable").append(row);
+
+    $("#customerTable > tr").click(function() {
+        /*console.log("row clicked");
+        console.log(this);*/
+        //console.log($(this));
+        var customerID = $(this).children(":eq(0)").text();
+        var customerName = $(this).children(":eq(1)").text();
+        var Address = $(this).children(":eq(2)").text();
+        var salary = $(this).children(":eq(3)").text();
+
+        //console.log(customerID, customerName, Address, salary);
+
+        /*set customer details for the textFields*/
+        $("#txtCustId").val(customerID);
+        $("#txtCustName").val(customerName);
+        $("#txtCustAddress").val(Address);
+        $("#txtCustSalary").val(salary);
+    });
 });
 
 /*save item*/
@@ -90,4 +108,20 @@ document.getElementById("btnItem").addEventListener("click", function (){
     /*select the body and added the row */
     //document.getElementById("itemTable").append(row);
     $("#itemTable").append(row);
+
+    $("#itemTable > tr").click(function() {
+            console.log("row clicked");
+            console.log(this);
+
+            var itemCode = $(this).children(":eq(0)").text();
+            var itemName = $(this).children(":eq(1)").text();
+            var price = $(this).children(":eq(2)").text();
+            var qty = $(this).children(":eq(3)").text();
+
+            /*set item details for the textFields*/
+            $("#txtCode").val(itemCode);
+            $("#txtItemName").val(itemName);
+            $("#txtPrice").val(price);
+            $("#txtQty").val(qty);
+    });
 });
