@@ -58,6 +58,9 @@ document.getElementById("item").addEventListener("click", function (){
 //btn select
 document.getElementById("btnAdd").addEventListener("click", function (){
 
+    //remove all the row click events
+    $("#customerTable > tr").off("click");
+
     //gather customer information
     var custId = document.getElementById("txtCustId").value;
     var custName = document.getElementById("txtCustName").value;
@@ -94,6 +97,9 @@ document.getElementById("btnAdd").addEventListener("click", function (){
 
 /*save item*/
 document.getElementById("btnItem").addEventListener("click", function (){
+
+    //remove all the row click events
+    $("#itemTable > tr").off("click");
 
     //gather item information
     var itemCode = document.getElementById("txtCode").value;
