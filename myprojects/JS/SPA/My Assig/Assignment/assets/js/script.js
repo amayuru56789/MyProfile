@@ -93,6 +93,11 @@ document.getElementById("btnAdd").addEventListener("click", function (){
         $("#txtCustAddress").val(Address);
         $("#txtCustSalary").val(salary);
     });
+
+     /*remove row from the customerTable*/
+     $("#customerTable > tr").dblclick(function(){
+        $(this).remove();
+    });
 });
 
 /*save item*/
