@@ -67,6 +67,16 @@ document.getElementById("btnAdd").addEventListener("click", function (){
     var custAddress = document.getElementById("txtCustAddress").value;
     var custSalary = document.getElementById("txtCustSalary").value;
 
+     //create object
+     var customerOb = {
+        id:custId,
+        name:custName,
+        address:custAddress,
+        salary:custSalary
+    };
+
+    customerDB.push(customerOb);
+
     /*create a row*/
     //var row = `<tr><td>${custID}</td><td>${custName}</td><td>${custAddress}</td><td>${custSalary}</td></tr>`;
     var row = `<tr><td>${custId}</td><td>${custName}</td><td>${custAddress}</td><td>${custSalary}</td></tr>`;
