@@ -100,6 +100,20 @@ document.getElementById("btnAdd").addEventListener("click", function (){
     });
 });
 
+// customer reguler expressions
+const regExCustId = /^(C00-)[0-9]{1,3}$/;
+const regExCustName = /^[A-z ]{5,20}$/;
+const regExCustAddress = /^[0-9/A-z. ,]{7,}$/;
+const regExCustSalary = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+
+$('#txtCustId,#txtCustName,#txtCustAddress,#txtCustSalary').on('keydown', function (eventOb) {
+    if (eventOb.key == "Tab") {
+        eventOb.preventDefault();
+    }
+});
+
+
+
 /*save item*/
 document.getElementById("btnItem").addEventListener("click", function (){
 
