@@ -61,21 +61,7 @@ document.getElementById("btnAdd").addEventListener("click", function (){
     //remove all the row click events
     $("#customerTable > tr").off("click");
 
-    //gather customer information
-    var custId = document.getElementById("txtCustId").value;
-    var custName = document.getElementById("txtCustName").value;
-    var custAddress = document.getElementById("txtCustAddress").value;
-    var custSalary = document.getElementById("txtCustSalary").value;
-
-     //create object
-     var customerOb = {
-        id:custId,
-        name:custName,
-        address:custAddress,
-        salary:custSalary
-    };
-
-    customerDB.push(customerOb);
+    saveCustomer();
     loadAllCustomers();
 
     $("#customerTable > tr").click(function() {
@@ -101,6 +87,24 @@ document.getElementById("btnAdd").addEventListener("click", function (){
         $(this).remove();
     });
 });
+
+function saveCustomer(){
+    //gather customer information
+       var custId = document.getElementById("txtCustId").value;
+       var custName = document.getElementById("txtCustName").value;
+       var custAddress = document.getElementById("txtCustAddress").value;
+       var custSalary = document.getElementById("txtCustSalary").value;
+
+       //create object
+       var customerOb = {
+           id:custId,
+           name:custName,
+           address:custAddress,
+           salary:custSalary
+       };
+
+       customerDB.push(customerOb);
+}
 
 function loadAllCustomers(){
     $("#customerTable").empty();
@@ -176,7 +180,7 @@ function clearAll() {
     $('#txtCustId,#txtCustName,#txtCustAddress,#txtCustSalary').css('border', '2px solid #ced4da');
     $('#txtCustId').focus();
     $("#btnAdd").attr('disabled', true);
-
+    
     $("#lblcustid,#lblcustname,#lblcustaddress,#lblcustsalary").text("");
 }
 
