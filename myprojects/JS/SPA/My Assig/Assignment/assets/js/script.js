@@ -62,6 +62,7 @@ document.getElementById("btnAdd").addEventListener("click", function (){
     $("#customerTable > tr").off("click");
 
     saveCustomer();
+    clearAll();
     loadAllCustomers();
 
     $("#customerTable > tr").click(function() {
@@ -180,7 +181,7 @@ function clearAll() {
     $('#txtCustId,#txtCustName,#txtCustAddress,#txtCustSalary').css('border', '2px solid #ced4da');
     $('#txtCustId').focus();
     $("#btnAdd").attr('disabled', true);
-    
+    loadAllCustomers();
     $("#lblcustid,#lblcustname,#lblcustaddress,#lblcustsalary").text("");
 }
 
@@ -240,7 +241,8 @@ function checkIfValid() {
                 if (resp) {
                     let res = confirm("Do you really need to add this Customer..?");
                     if (res) {
-
+                        saveCustomer();
+                        clearAll();
                     }
                 } else {
                     $("#txtCustSalary").focus();
