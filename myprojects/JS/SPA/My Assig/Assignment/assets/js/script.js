@@ -117,6 +117,29 @@ function loadAllCustomers(){
     }
 }
 
+//search customer
+$("#button-addon2").click(function(){
+    var searchId = $("#txtsearchCustId").val();
+    var response = searchCustomer(searchId);
+    if(response){
+        $("#txtCustId").val(response.id);
+        $("#txtCustName").val(response.name);
+        $("#txtCustAddress").val(response.address);
+        $("#txtCustSalary").val(response.salary);
+    }else{
+        clearAll();
+        alert("No such a Customer");
+    }
+});
+
+function searchCustomer(id){
+    for(let i=0; i<customerDB.length; i++){
+        if(customerDB[i].id==id){
+            return customerDB[i];
+        }
+    }
+}
+
 //validation
 // customer reguler expressions
 const regExCustId = /^(C00-)[0-9]{1,3}$/;
