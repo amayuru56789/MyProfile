@@ -76,15 +76,7 @@ document.getElementById("btnAdd").addEventListener("click", function (){
     };
 
     customerDB.push(customerOb);
-
-    /*create a row*/
-    //var row = `<tr><td>${custID}</td><td>${custName}</td><td>${custAddress}</td><td>${custSalary}</td></tr>`;
-    var row = `<tr><td>${custId}</td><td>${custName}</td><td>${custAddress}</td><td>${custSalary}</td></tr>`;
-   /* console.log(row);*/
-
-    /*select the body and added the row */
-    //document.getElementById("customerTable").append(row);
-    $("#customerTable").append(row);
+    loadAllCustomers();
 
     $("#customerTable > tr").click(function() {
         /*console.log("row clicked");
@@ -109,6 +101,16 @@ document.getElementById("btnAdd").addEventListener("click", function (){
         $(this).remove();
     });
 });
+
+function loadAllCustomers(){
+    $("#customerTable").empty();
+    for(var i=0; i<customerDB.length; i++){
+        /*create a row*/
+        var row = `<tr><td>${customerDB[i].id}</td><td>${customerDB[i].name}</td><td>${customerDB[i].address}</td><td>${customerDB[i].salary}</td></tr>`;
+        /*select the body and added the row */
+        $("#customerTable").append(row);
+    }
+}
 
 //validation
 // customer reguler expressions
