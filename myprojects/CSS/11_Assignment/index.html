@@ -145,6 +145,44 @@
                 height: 699px;
             }
         }
+
+        @media all and (min-width: 425px) and (max-width: 768px){
+            header{
+                height: 100px;
+            }
+
+            header > img{
+                position: absolute;
+                left: 0;
+                top: 12px;
+                right: 0;
+                margin: auto;
+            }
+
+            header > ul{
+                right: 30px;
+                bottom: 15px;
+                left: 0;
+                /*font-size: 25px;*/
+                font-size: 20px;
+                width: max-content;
+                margin: auto;
+                padding-left: 0;
+            }
+
+            main > nav{
+                display: none;
+            }
+
+            main > section{
+                margin-left: 0;
+            }
+
+            main > section > section{
+                flex-direction: column;
+                height: 900px;
+            }
+        }
     </style>
 </head>
 <body>
