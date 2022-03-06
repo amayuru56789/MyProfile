@@ -386,8 +386,39 @@ main > section:nth-child(4) > div{
     color: black;
 }
 
+main > section:nth-child(4) > #slider{
+    position: absolute;
+    /*top: 85px;*/
+    top: 275px;
+    left: 288px;
+}
 
+#slider{
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+    /*background-color: red;*/
+}
 
+#slider input[type=radio]{
+    display: none;
+}
+
+#overflow{
+    background: rgba(13, 53, 115, 0.7);
+    color: black;
+}
+
+.inner{
+    /*background: rgba(4, 153, 253, 0.7);*/
+    color: black;
+}
+
+#slider label{
+    cursor: pointer;
+    text-decoration: none;
+}
 
 
 /*.hi-slide{
