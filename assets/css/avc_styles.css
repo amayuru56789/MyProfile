@@ -523,6 +523,27 @@ main > section:nth-child(4) > #slider{
     display: block;
 }
 
+#bullets{
+    margin: 100px 0 0;
+    text-align: center;
+}
+
+#bullets label{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #ccc;
+    margin: 0 10px;
+}
+
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide1:checked ~ #bullets label:nth-child(2),
+#slide1:checked ~ #bullets label:nth-child(3),
+#slide1:checked ~ #bullets label:nth-child(4){
+    /*background: #444;*/
+}
+
 /*.hi-slide{
     position: relative;
     width: 754px;
