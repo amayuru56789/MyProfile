@@ -468,6 +468,32 @@ main > section:nth-child(4) > #slider{
     color: #fff;
 }
 
+#slides .slide_1{
+    background-color: #00171F;
+}
+
+#slides .slide_2{
+    background-color: #003459;
+}
+
+#slides .slide_3{
+    background-color: #007EA7;
+}
+
+#slides .slide_4{
+    background-color: #00A8E8;
+}
+
+#slides .slide_1 > div > img{
+    width: 340px;
+    height: 182px;
+}
+
+.slide-content{
+    padding: 10px;
+}
+
+
 /*.hi-slide{
     position: relative;
     width: 754px;
