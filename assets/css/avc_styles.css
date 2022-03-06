@@ -382,7 +382,15 @@ main > section:nth-child(4) > h1{
     font-family: 'Roboto', sans-serif;
 }
 
-.hi-slide{
+main > section:nth-child(4) > div{
+    color: black;
+}
+
+
+
+
+
+/*.hi-slide{
     position: relative;
     width: 754px;
     height: 292px;
@@ -411,7 +419,7 @@ main > section:nth-child(4) > h1{
 .hi-slide .hi-prev:hover{
     opacity: 1;
     background-color: white;
-}
+}*/
 
 main > section:nth-child(5) > #img4{
     width: 100%;
