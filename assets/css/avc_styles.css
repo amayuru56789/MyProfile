@@ -436,6 +436,22 @@ main > section:nth-child(4) > #slider{
     overflow: hidden;
 }
 
+#slide1:checked ~ #slides .inner{
+    margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner{
+    margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner{
+    margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner{
+    margin-left: -300%;
+}
+
 /*.hi-slide{
     position: relative;
     width: 754px;
