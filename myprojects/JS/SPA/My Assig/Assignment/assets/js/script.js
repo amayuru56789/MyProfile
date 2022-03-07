@@ -295,7 +295,8 @@ $('#btnAdd').click(function () {
 });
 //validation ended
 
-/*save item*/
+/*save item*//*
+
 document.getElementById("btnItem").addEventListener("click", function (){
 
     //remove all the row click events
@@ -307,11 +308,17 @@ document.getElementById("btnItem").addEventListener("click", function (){
     var price = document.getElementById("txtPrice").value;
     var qty = document.getElementById("txtQty").value;
 
-    /*create a row*/
-    var row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${price}</td><td>${qty}</td></tr>`;
-   /* console.log(row);*/
+    */
+/*create a row*//*
 
-    /*select the body and added the row */
+    var row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${price}</td><td>${qty}</td></tr>`;
+   */
+/* console.log(row);*//*
+
+
+    */
+/*select the body and added the row *//*
+
     //document.getElementById("itemTable").append(row);
     $("#itemTable").append(row);
 
@@ -324,10 +331,13 @@ document.getElementById("btnItem").addEventListener("click", function (){
             var price = $(this).children(":eq(2)").text();
             var qty = $(this).children(":eq(3)").text();
 
-            /*set item details for the textFields*/
+            */
+/*set item details for the textFields*//*
+
             $("#txtCode").val(itemCode);
             $("#txtItemName").val(itemName);
             $("#txtPrice").val(price);
             $("#txtQty").val(qty);
     });
 });
+*/
