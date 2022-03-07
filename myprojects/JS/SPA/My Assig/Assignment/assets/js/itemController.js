@@ -26,3 +26,11 @@ function loadAllItems(){
         $("#itemTable").append(row);
     }
 }
+
+function searchItem(code){
+    for(let i=0; i<itemDB.length; i++){
+        if(itemDB[i].code==code){
+            return customerDB[i];
+        }
+    }
+}
