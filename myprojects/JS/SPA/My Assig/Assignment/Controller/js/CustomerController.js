@@ -135,6 +135,27 @@ function searchCustomer(id){
     }
 }
 
+function updateCustomer(){
+    var custId = document.getElementById("txtCustId").value;
+    var custName = document.getElementById("txtCustName").value;
+    var custAddress = document.getElementById("txtCustAddress").value;
+    var custSalary = document.getElementById("txtCustSalary").value;
+
+    for(var i=0; i<customerDB.length; i++){
+        if(customerDB[i].getCustomerID()==custId){
+            var customer = customerDB[i];
+             customer.setCustomerName(custName);
+             customer.setCustomerAddress(custAddress);
+             customer.setCustomerSalary(custSalary);
+        }
+    }
+}
+
+$("#btnCustUpdate").click(function() {
+    updateCustomer();
+    loadAllCustomers();
+});
+
 //validation
 // customer reguler expressions
 const regExCustId = /^(C00-)[0-9]{1,3}$/;
