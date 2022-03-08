@@ -156,6 +156,37 @@ $("#btnCustUpdate").click(function() {
     loadAllCustomers();
 });
 
+function deleteCustomer(id){
+    let customer;
+    if(id!=null){
+        for(var i=0; i<customerDB.length; i++){
+            if(id==customerDB[i].getCustomerID()){
+                customer=customerDB[i];
+            }
+        }
+        let index = customerDB.indexOf(customer);
+        customerDB.splice(index,1);
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
+$("#btnCustDelete").click(function() {
+    let id = $("#txtCustId").val();
+
+    let option = confirm(`Do you want delete Customer : ${id} `);
+    if(option){
+        if(deleteCustomer(id)){
+            alert("Customer delete Success");
+            loadAllCustomers();
+        }else{
+            alert("Try again...");
+        }
+    }
+});
+
 //validation
 // customer reguler expressions
 const regExCustId = /^(C00-)[0-9]{1,3}$/;
