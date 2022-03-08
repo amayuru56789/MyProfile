@@ -9,20 +9,25 @@ function saveItem(){
     var price = $("#txtPrice").val();
     var qty = $("#txtQty").val();
 
-    var itemOb = {
+    /*var itemOb = {
         code:itemCode,
         name:itemName,
         price:price,
         qty:qty
     };
 
-    itemDB.push(itemOb);
+    itemDB.push(itemOb);*/
+    itemDB.push(new ItemDTO(itemCode,itemName,price,qty));
 }
 
 function loadAllItems(){
     $("#itemTable").empty();
-    for(var i=0; i<itemDB.length; i++){
+    /*for(var i=0; i<itemDB.length; i++){
         var row = `<tr><td>${itemDB[i].code}</td><td>${itemDB[i].name}</td><td>${itemDB[i].price}</td><td>${itemDB[i].qty}</td></tr>`;
+        $("#itemTable").append(row);
+    }*/
+    for(var i of itemDB){
+        let row = `<tr><td>${i.getItemCODE()}</td><td>${i.getItemName()}</td><td>${i.getItemPrice()}</td><td>${i.getItemQty()}</td></tr>`;
         $("#itemTable").append(row);
     }
 }
