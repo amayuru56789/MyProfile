@@ -97,21 +97,16 @@ function saveCustomer(){
        var custSalary = document.getElementById("txtCustSalary").value;
 
        //create object
-       var customerOb = {
-           id:custId,
-           name:custName,
-           address:custAddress,
-           salary:custSalary
-       };
 
-       customerDB.push(customerOb);
+
+       customerDB.push(new CustomerDTO(custId,custName,custAddress,custSalary));
 }
 
 function loadAllCustomers(){
     $("#customerTable").empty();
-    for(var i=0; i<customerDB.length; i++){
+    for(var i of customerDB){
         /*create a row*/
-        var row = `<tr><td>${customerDB[i].id}</td><td>${customerDB[i].name}</td><td>${customerDB[i].address}</td><td>${customerDB[i].salary}</td></tr>`;
+        let row = `<tr><td>${i.getCustomerID()}</td><td>${i.getCustomerName()}</td><td>${i.getCustomerAddress()}</td><td>${i.getCustomerSalary()}</td></tr>`;
         /*select the body and added the row */
         $("#customerTable").append(row);
     }

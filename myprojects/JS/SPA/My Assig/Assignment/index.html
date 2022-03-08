@@ -113,7 +113,7 @@
                 </div>
 
                 <div>
-                    <button class="btn-danger">Delete</button>
+                    <button class="btn-danger" id="btnCustDelete">Delete</button>
                     <button class="btn-primary">Details</button>
                     <button class="btn-success">Clear</button>
                 </div>
@@ -162,7 +162,7 @@
                 <div class="row">
                     <div class="col mt-lg-4">
                         <button id="btnAdd" class="btn btn-danger">Save</button>
-                        <button class="btn btn-warning">Renew</button>
+                        <button class="btn btn-warning" id="btnCustUpdate">Renew</button>
                         <button class="btn btn-info">Close</button>
                     </div>
                 </div>
@@ -181,12 +181,12 @@
                         </thead>
 
                         <tbody id="customerTable">
-                        <tr>
+                        <!--<tr>
                             <td>C003</td>
                             <td>Malitha</td>
                             <td>Panadura</td>
                             <td>10000.00</td>
-                        </tr>
+                        </tr>-->
                         <!--<tr>
                             <td>C004</td>
                             <td>Siripala</td>
@@ -540,8 +540,10 @@
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="db/DB.js"></script>
 <script src="Controller/js/CustomerController.js"></script>
+
 <script src="Controller/js/itemController.js"></script>
 <!--<script src="assets/jQuery/jquery-3.6.0.min.js"></script>-->
+<script src="model/CustomerDTO.js"></script>
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

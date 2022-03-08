@@ -48,7 +48,7 @@ function searchItem(code){
         }
     }
 }
-//validation start
+/*//validation start
 const regExItemCode = /^(I00-)[0-9]{1,3}$/;
 const regExItemName = /^[A-z ]{1,20}$/;
 const regExItemPrice = /^[0-9]{1,}[.]?[0-9]{1,2}$/
@@ -199,5 +199,5 @@ function setButton() {
 
 $('#btnItem').click(function () {
     checkIfValid();
-});
+});*/
 //validation ended
