@@ -1,6 +1,23 @@
 $("#btnItem").click(function() {
     saveItem();
     loadAllItems();
+
+    $("#itemTable > tr").click(function() {
+                    console.log("row clicked");
+                    console.log(this);
+
+                    var itemCode = $(this).children(":eq(0)").text();
+                    var itemName = $(this).children(":eq(1)").text();
+                    var price = $(this).children(":eq(2)").text();
+                    var qty = $(this).children(":eq(3)").text();
+
+        /*set item details for the textFields*/
+
+                    $("#txtCode").val(itemCode);
+                    $("#txtItemName").val(itemName);
+                    $("#txtPrice").val(price);
+                    $("#txtQty").val(qty);
+            });
 });
 
 function saveItem(){
