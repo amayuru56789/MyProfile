@@ -54,7 +54,26 @@ function searchItem(code){
     }
 }
 
+function updateItem(){
+    var itemCode = document.getElementById("txtCode").value;
+    var itemName = document.getElementById("txtItemName").value;
+    var itemPrice = document.getElementById("txtPrice").value;
+    var itemQty = document.getElementById("txtQty").value;
 
+    for(var i=0; i<itemDB.length; i++){
+        if(itemDB[i].getItemCODE()==itemCode){
+            var item = itemDB[i];
+             item.setItemName(itemName);
+             item.setItemPrice(itemPrice);
+             item.setItemQty(itemQty);
+        }
+    }
+}
+
+$("#btnItemUpdate").click(function() {
+    updateItem();
+    loadAllItems();
+});
 /*//validation start
 const regExItemCode = /^(I00-)[0-9]{1,3}$/;
 const regExItemName = /^[A-z ]{1,20}$/;
