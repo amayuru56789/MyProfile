@@ -36,10 +36,10 @@ $("#button-addon3").click(function(){
     var searchCode = $("#txtsearchItemId").val();
     var response = searchItem(searchCode);
     if(response){
-        $("#txtCode").val(response.code);
-        $("#txtItemName").val(response.name);
-        $("#txtPrice").val(response.price);
-        $("#txtQty").val(response.qty);
+        $("#txtCode").val(response.getItemCODE);
+        $("#txtItemName").val(response.getItemName);
+        $("#txtPrice").val(response.getItemPrice);
+        $("#txtQty").val(response.getItemQty);
     }else{
         /*clearAll();*/
         alert("No such a Item");
@@ -48,7 +48,7 @@ $("#button-addon3").click(function(){
 
 function searchItem(code){
     for(let i=0; i<itemDB.length; i++){
-        if(itemDB[i].code==code){
+        if(itemDB[i].getItemCODE==code){
             return itemDB[i];
         }
     }
@@ -73,6 +73,37 @@ function updateItem(){
 $("#btnItemUpdate").click(function() {
     updateItem();
     loadAllItems();
+});
+
+function deleteItem(code){
+    let item;
+    if(code!=null){
+        for(var i=0; i<itemDB.length; i++){
+            if(code==itemDB[i].getItemCODE()){
+                item=itemDB[i];
+            }
+        }
+        let index = itemDB.indexOf(item);
+        itemDB.splice(index,1);
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
+$("#deleteItem").click(function() {
+    let code = $("#txtCode").val();
+
+    let option = confirm(`Do you want delete Item : ${code} `);
+    if(option){
+        if(deleteItem(code)){
+            alert("Item delete Success");
+            loadAllItems();
+        }else{
+            alert("Try again...");
+        }
+    }
 });
 /*//validation start
 const regExItemCode = /^(I00-)[0-9]{1,3}$/;
