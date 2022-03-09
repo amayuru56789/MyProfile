@@ -49,6 +49,11 @@
                     <li class="nav-item">
                         <a id="customer-click" class="nav-link active" aria-current="page" href="#">Customer</a>
                     </li>
+                    <li class="nav-item">
+                        <a id="orderDetail-click" class="nav-link" href="#">
+                            Order details
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="nav justify-content-end" id="navbarNav">
@@ -535,6 +540,45 @@
         </section>
     </section>
 
+    <section id="orderDetails" class="container-fluid">
+        <div class="alert alert-secondary" role="alert">
+            <i class="fas fa-shopping-bag"></i> Order Details
+        </div>
+
+        <!--main Container-->
+        <section class="container-fluid bg-light">
+            <div class="row align-items-center">
+                <div class="col-12 mt-2">
+                    <table class="table table-dark table-striped table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Customer name</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Total</th>
+
+                        </tr>
+                        </thead>
+
+                        <tbody id="orderDetailTable">
+                        <!--<tr>
+                             <td>I001</td>
+                             <td>Keerisamba 5Kg</td>
+                             <td>525.00</td>
+                             <td>2</td>
+                         </tr>-->
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+
+        </section>
+    </section>
+
+
 </main>
 
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
@@ -545,6 +589,8 @@
 <!--<script src="assets/jQuery/jquery-3.6.0.min.js"></script>-->
 <script src="model/CustomerDTO.js"></script>
 <script src="model/ItemDTO.js"></script>
+<script src="model/OrderDTO.js"></script>
+<script src="model/OrderDetailsDTO.js"></script>
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
