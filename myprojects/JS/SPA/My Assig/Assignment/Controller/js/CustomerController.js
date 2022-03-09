@@ -117,10 +117,10 @@ $("#button-addon2").click(function(){
     var searchId = $("#txtsearchCustId").val();
     var response = searchCustomer(searchId);
     if(response){
-        $("#txtCustId").val(response.id);
-        $("#txtCustName").val(response.name);
-        $("#txtCustAddress").val(response.address);
-        $("#txtCustSalary").val(response.salary);
+        $("#txtCustId").val(response.getCustomerID);
+        $("#txtCustName").val(response.getCustomerName);
+        $("#txtCustAddress").val(response.getCustomerAddress);
+        $("#txtCustSalary").val(response.getCustomerSalary);
     }else{
         clearAll();
         alert("No such a Customer");
@@ -129,7 +129,7 @@ $("#button-addon2").click(function(){
 
 function searchCustomer(id){
     for(let i=0; i<customerDB.length; i++){
-        if(customerDB[i].id==id){
+        if(customerDB[i].getCustomerID()==id){
             return customerDB[i];
         }
     }

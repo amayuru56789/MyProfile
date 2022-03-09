@@ -53,6 +53,8 @@ function searchItem(code){
         }
     }
 }
+
+
 /*//validation start
 const regExItemCode = /^(I00-)[0-9]{1,3}$/;
 const regExItemName = /^[A-z ]{1,20}$/;
