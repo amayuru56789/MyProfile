@@ -36,9 +36,31 @@ function loadCustomerIds(){
     }
 }
 
+$("#cmbItemCode").click(function () {
+    let itemCode = $("#cmbItemCode").val();
+    for (var i of itemDB){
+        if (itemCode==i.getItemCODE()){
+            $("#txtPItemName").val(i.getItemName());
+            $("#txtPItemPrice").val(i.getItemPrice());
+            $("#txtPItemQty").val(i.getItemQty());
+        }
+    }
+});
+
+function loadItemCode(){
+    $("#cmbItemCode").empty();
+    var item = itemDB;
+    for (var i in item){
+        var opt = document.createElement("option");
+        opt.value = item[i].getItemCODE();
+        opt.text = item[i].getItemCODE();
+        $("#cmbItemCode").append(opt);
+    }
+}
+
 function forOrder() {
     generateOrderID();
     loadCustomerIds();
 
-    
+    loadItemCode();
 }
