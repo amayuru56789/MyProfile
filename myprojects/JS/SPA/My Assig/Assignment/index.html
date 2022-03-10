@@ -345,9 +345,13 @@
                             </div>
                             <div class="col">
                                 <caption>Date:</caption>
-                                <form>
+                                <!--<form>
                                     <input class="form-control " type="text">
-                                </form>
+                                </form>-->
+                                <div class="col-md-4 m-lg-auto" style="width: 100%;">
+                                    <input class="form-control input-md" id="date" name="textInput"
+                                           placeholder="placeholder" type="date">
+                                </div>
                             </div>
 
                         </div>
@@ -452,7 +456,7 @@
                         <!--Row 04-->
                         <div class="row align-items-end">
                             <div class="col-12 mt-lg-4">
-                                <button class="btn btn-danger">Add Item</button>
+                                <button class="btn btn-danger" id="btnAddToCart">Add To Cart</button>
                             </div>
                         </div>
                     </section>
@@ -495,7 +499,7 @@
                         <!--Row 03-->
                         <div class="row align-items-center">
                             <div class="col-12 mt-lg-4">
-                                <button class="btn btn-success">Purchase</button>
+                                <button class="btn btn-success" id="btnPurch">Purchase</button>
                             </div>
                         </div>
                     </section>
@@ -542,12 +546,11 @@
                             <th scope="col">Customer name</th>
                             <th scope="col">Total</th>
                             <th scope="col">Date</th>
-                            <th scope="col">Total</th>
 
                         </tr>
                         </thead>
 
-                        <tbody id="orderDetailTable">
+                        <tbody id="orderTable">
                         <!--<tr>
                              <td>I001</td>
                              <td>Keerisamba 5Kg</td>
@@ -578,6 +581,7 @@
 <script src="model/ItemDTO.js"></script>
 <script src="model/OrderDTO.js"></script>
 <script src="model/OrderDetailsDTO.js"></script>
+<script src="model/CartDTO.js"></script>
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

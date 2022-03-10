@@ -5,43 +5,43 @@ function CartDTO(itemCode,itemName,price,qty,total){
     var __itemQTY=qty;
     var __itemTot=total;
 
-    this.getItemCode = function() {
+    this.getICode = function() {
         return __itemCode;
     }
 
-    this.setItemCode = function() {
+    this.setICode = function(code) {
         __itemCode=itemCode;
     }
 
-    this.getItemName = function() {
+    this.getIName = function() {
         return __itemName;
     }
 
-    this.setItemName = function() {
+    this.setIName = function(name) {
         __itemName=itemName;
     }
 
-    this.getItemPrice = function() {
+    this.getIPrice = function() {
         return __itemPrice;
     }
 
-    this.setItemPrice = function() {
+    this.setIPrice = function(price) {
         __itemPrice=price;
     }
 
-    this.getItemQty = function() {
+    this.getIQty = function() {
         return __itemQTY;
     }
 
-    this.setItemQty = function() {
+    this.setIQty = function(qty) {
         __itemQTY=qty;
     }
 
-    this.getItemTotal = function() {
+    this.getITotal = function() {
         return __itemTot;
     }
 
-    this.setItemTotal = function() {
+    this.setITotal = function(total) {
         __itemTot=total;
     }
 }

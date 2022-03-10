@@ -59,7 +59,7 @@ function loadItemCode(){
 }
 
 function findTotal(){
-    let total = 0;
+    let tot = 0;
     $('#tblAddToCart > tr').each(function () {
         tot = tot + parseFloat($($(this).children().get(4)).text());
         $('#lblTot > span').text(tot).append('.00');
@@ -72,6 +72,70 @@ function findTotal(){
     t = tot;
 }
 
+$("#txtDiscount").on('keyup',function (){
+    if ($('#txtDiscount').val() == '') {
+        $('#lblSubTot > span').text('0.00');
+    } else {
+        let tot = parseFloat(t);
+        let dis = tot/100 * parseFloat($('#txtDiscount').val());
+
+        $('#lblSubTot > span').text(tot - dis).append('.00');
+    }
+});
+
+function addToCart() {
+    let itemCode = $("#cmbItemCode").val();
+    let itemName = $("#txtPItemName").val();
+    let itemPrice = $("#txtPItemPrice").val();
+    let itemQty = $("#txtPItemQty").val();
+    let OrderQty = $("#txtPOrderQty").val();
+
+    let total = itemPrice * OrderQty;
+    for (var i =0; i<cartDB.length; i++){
+        if (cartDB[i].getICode()==itemCode){
+            var newQTY = +cartDB[i].getIQty() + +OrderQty;
+            var  newTot = itemPrice * newQTY;
+            cartDB[i].setIQty(newQTY);
+            cartDB[i].setITotal(newTot);
+            /*console.log(newQTY);
+            console.log(newTot);*/
+            return;
+        }
+    }
+    cartDB.push(new CartDTO(itemCode,itemName,itemPrice,OrderQty,total));
+}
+
+function qtyUpdate() {
+    let item;
+    var itemQty=$('#txtPItemQty').val();
+    var orderQty=$('#txtPOrderQty').val();
+
+    var updateQty=itemQty-orderQty;
+    for (var i in itemDB){
+        if($('#cmbItemCode').val()==itemDB[i].getItemCODE()){
+            item=itemDB[i];
+            item.setItemQty(updateQty);
+            $('#txtPItemQty').val(item.getItemQty());
+        }
+    }
+}
+
+function loadCartTable(){
+    $("#tblAddToCart").empty();
+    for (var i of cartDB){
+        let row = `<tr><td>${i.getICode()}</td><td>${i.getIName()}</td><td>${i.getIPrice()}</td><td>${i.getIQty()}</td><td>${i.getITotal()}</td></tr>`;
+        $("#tblAddToCart").append(row);
+    }
+}
+
+function PlaceOrder(){
+    let oId = $("#txtOrderId").val();
+    let date = $("#txtOrderDate").val();
+    let custName = $("#txtCustName").val();
+    let total = $("#lblTot").text();
+    orderDB.push(new OrderDTO(oId,custName,total,date));
+}
+
 function forOrder() {
     generateOrderID();
     loadCustomerIds();
@@ -79,3 +143,14 @@ function forOrder() {
     loadItemCode();
     findTotal();
 }
+
+$("#btnAddToCart").click(function () {
+    addToCart();
+    loadCartTable();
+    findTotal();
+    qtyUpdate();
+});
+
+$("#btnPurch").click(function () {
+    PlaceOrder();
+});
