@@ -58,9 +58,24 @@ function loadItemCode(){
     }
 }
 
+function findTotal(){
+    let total = 0;
+    $('#tblAddToCart > tr').each(function () {
+        tot = tot + parseFloat($($(this).children().get(4)).text());
+        $('#lblTot > span').text(tot).append('.00');
+
+        if($("#txtDiscount").val()==""){
+
+            $('#lblSubTot > span').text(tot).append('.00');
+        }
+    });
+    t = tot;
+}
+
 function forOrder() {
     generateOrderID();
     loadCustomerIds();
 
     loadItemCode();
+    findTotal();
 }

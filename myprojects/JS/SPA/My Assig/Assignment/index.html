@@ -461,8 +461,8 @@
 
                 <!--       Col 1 As Price Total-->
                 <div class="col bg-white m-4 pb-4">
-                    <h4 class="text-primary">Total: 1050Rs./=</h4>
-                    <h4 class="text-danger">SubTotal: 945Rs./=</h4>
+                    <h4 class="text-primary" id="lblTot">Total: <span>0</span>./=</h4>
+                    <h4 class="text-danger" id="lblSubTot">SubTotal: <span>0</span> ./=</h4>
                     <!-- Internal Grid-->
                     <section class="container">
                         <!--Row 01-->
@@ -476,7 +476,7 @@
                             <div class="col">
                                 <caption>Discount:</caption>
                                 <form>
-                                    <input class="form-control " type="text">
+                                    <input id="txtDiscount" class="form-control " type="text">
                                 </form>
                             </div>
                         </div>
@@ -516,21 +516,8 @@
                             <th scope="col">Total</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">P001</th>
-                            <td>Keerisamba 5Kg</td>
-                            <td>525.00</td>
-                            <td>2</td>
-                            <td>1050</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">P002</th>
-                            <td>Parippu 2Kg</td>
-                            <td>200.00</td>
-                            <td>1</td>
-                            <td>200</td>
-                        </tr>
+                        <tbody id="tblAddToCart">
+
                         </tbody>
                     </table>
                 </div>
