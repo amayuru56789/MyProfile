@@ -226,7 +226,7 @@ $("#txtCustId").on('keyup', function (eventOb) {
 
     if (eventOb.key == "Control") {
         var typedCustomerID = $("#txtCustId").val();
-        var srcCustomer = searchCustomerFromID(typedCustomerID);
+        /*var srcCustomer = searchCustomerFromID(typedCustomerID);*/
         $("#txtCustId").val(srcCustomer.getCustomerID());
         $("#txtCustName").val(srcCustomer.getCustomerName());
         $("#txtCustAddress").val(srcCustomer.getCustomerAddress());

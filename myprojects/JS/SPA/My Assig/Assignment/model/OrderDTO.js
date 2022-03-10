@@ -8,7 +8,7 @@ function OrderDTO(oId,custName,total,date) {
         return __oID;
     }
 
-    this.setOrderID(oID)=function() {
+    this.setOrderID=function(oID) {
         __oID=oID;
     }
 

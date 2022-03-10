@@ -39,7 +39,7 @@
                         <a id="home-click" class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a id="order-click" class="nav-link" href="#">Orders</a>
+                        <a id="order-click" class="nav-link" onclick="forOrder()" href="#">Orders</a>
                     </li>
                     <li class="nav-item">
                         <a id="item-click" class="nav-link" href="#">
@@ -340,7 +340,7 @@
                             <div class="col">
                                 <caption>Order ID:</caption>
                                 <form>
-                                    <input class="form-control " type="text">
+                                    <input class="form-control " id="txtOrderId" type="text">
                                 </form>
                             </div>
                             <div class="col">
@@ -361,9 +361,7 @@
                             </div>
                             <div class="col">
                                 <caption>Customer ID:</caption>
-                                <form>
-                                    <input class="form-control " type="text">
-                                </form>
+                                <select class="form-select " aria-label="Default select example" id="cmbCustIDs"></select>
                             </div>
 
                         </div>
@@ -372,13 +370,13 @@
                             <div class="col">
                                 <caption>Name:</caption>
                                 <form>
-                                    <input class="form-control " type="text">
+                                    <input class="form-control " id="txtPCustName" type="text">
                                 </form>
                             </div>
                             <div class="col">
                                 <caption>Salary:</caption>
                                 <form>
-                                    <input class="form-control " type="text">
+                                    <input class="form-control " id="txtPCustSalary" type="text">
                                 </form>
                             </div>
 
@@ -388,7 +386,7 @@
                             <div class="col">
                                 <caption>Address:</caption>
                                 <form>
-                                    <input class="form-control " type="text">
+                                    <input class="form-control " id="txtPCustAddress" type="text">
                                 </form>
                             </div>
                         </div>
@@ -586,6 +584,7 @@
 <script src="Controller/js/CustomerController.js"></script>
 
 <script src="Controller/js/itemController.js"></script>
+<script src="Controller/js/PlaceOrderController.js"></script>
 <!--<script src="assets/jQuery/jquery-3.6.0.min.js"></script>-->
 <script src="model/CustomerDTO.js"></script>
 <script src="model/ItemDTO.js"></script>
