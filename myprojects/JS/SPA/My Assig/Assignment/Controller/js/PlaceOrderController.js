@@ -130,8 +130,8 @@ function loadCartTable(){
 
 function PlaceOrder(){
     let oId = $("#txtOrderId").val();
-    let date = $("#txtOrderDate").val();
-    let custName = $("#txtCustName").val();
+    let date = $("#date").val();
+    let custName = $("#txtPCustName").val();
     let total = $("#lblTot").text();
     orderDB.push(new OrderDTO(oId,custName,total,date));
 }
@@ -153,4 +153,5 @@ $("#btnAddToCart").click(function () {
 
 $("#btnPurch").click(function () {
     PlaceOrder();
+    generateOrderID();
 });
