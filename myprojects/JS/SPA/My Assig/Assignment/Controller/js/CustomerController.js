@@ -135,7 +135,7 @@ $("#button-addon2").click(function(){
         $("#txtCustAddress").val(response.getCustomerAddress);
         $("#txtCustSalary").val(response.getCustomerSalary);
     }else{
-        clearAll();
+        clearAllCustomer();
         alert("No such a Customer");
     }
 });
@@ -214,14 +214,14 @@ $('#txtCustId,#txtCustName,#txtCustAddress,#txtCustSalary').on('keydown', functi
 });
 
 $('#txtCustId,#txtCustName,#txtCustAddress,#txtCustSalary').on('blur', function () {
-    formValid();
+    formValidCustomer();
 });
 
 //focusing events
 $("#txtCustId").on('keyup', function (eventOb) {
-    setButton();
+    setButtonCust();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValidCustomer();
     }
 
     if (eventOb.key == "Control") {
@@ -236,30 +236,30 @@ $("#txtCustId").on('keyup', function (eventOb) {
 });
 
 $("#txtCustName").on('keyup', function (eventOb) {
-    setButton();
+    setButtonCust();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValidCustomer();
     }
 });
 
 $("#txtCustAddress").on('keyup', function (eventOb) {
-    setButton();
+    setButtonCust();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValidCustomer();
     }
 });
 
 $("#txtCustSalary").on('keyup', function (eventOb) {
-    setButton();
+    setButtonCust();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValidCustomer();
     }
 });
 // focusing events end
 
 $("#btnAdd").attr('disabled', true);
 
-function clearAll() {
+function clearAllCustomer() {
     $('#txtCustId,#txtCustName,#txtCustAddress,#txtCustSalary').val("");
     $('#txtCustId,#txtCustName,#txtCustAddress,#txtCustSalary').css('border', '2px solid #ced4da');
     $('#txtCustId').focus();
@@ -268,7 +268,7 @@ function clearAll() {
     $("#lblcustid,#lblcustname,#lblcustaddress,#lblcustsalary").text("");
 }
 
-function formValid() {
+function formValidCustomer() {
     var custId = $("#txtCustId").val();
     $("#txtCustId").css('border', '2px solid green');
     $("#lblcustid").text("");
@@ -309,7 +309,7 @@ function formValid() {
     }
 }
 
-function checkIfValid() {
+function checkIfValidCustomer() {
     var custId = $("#txtCustId").val();
     if (regExCustId.test(custId)) {
         $("#txtCustName").focus();
@@ -325,7 +325,7 @@ function checkIfValid() {
                     let res = confirm("Do you really need to add this Customer..?");
                     if (res) {
                         saveCustomer();
-                        clearAll();
+                        clearAllCustomer();
                     }
                 } else {
                     $("#txtCustSalary").focus();
@@ -341,8 +341,8 @@ function checkIfValid() {
     }
 }
 
-function setButton() {
-    let b = formValid();
+function setButtonCust() {
+    let b = formValidCustomer();
     if (b) {
         $("#btnAdd").attr('disabled', false);
     } else {
@@ -351,7 +351,7 @@ function setButton() {
 }
 
 $('#btnAdd').click(function () {
-    checkIfValid();
+    checkIfValidCustomer();
 });
 //validation ended
 

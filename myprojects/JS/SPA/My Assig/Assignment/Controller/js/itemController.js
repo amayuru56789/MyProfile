@@ -122,7 +122,7 @@ $("#deleteItem").click(function() {
         }
     }
 });
-/*//validation start
+//validation start
 const regExItemCode = /^(I00-)[0-9]{1,3}$/;
 const regExItemName = /^[A-z ]{1,20}$/;
 const regExItemPrice = /^[0-9]{1,}[.]?[0-9]{1,2}$/
@@ -135,14 +135,14 @@ $('#txtCode,#txtItemName,#txtPrice,#txtQty').on('keydown', function (eventOb) {
 });
 
 $('#txtCode,#txtItemName,#txtPrice,#txtQty').on('blur', function () {
-    formValid();
+    formValidItem();
 });
 
 //focusing events
 $("#txtCode").on('keyup', function (eventOb) {
-    setButton();
+    setButtonItem();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValidItem();
     }
 
     if (eventOb.key == "Control") {
@@ -157,30 +157,30 @@ $("#txtCode").on('keyup', function (eventOb) {
 });
 
 $("#txtItemName").on('keyup', function (eventOb) {
-    setButton();
+    setButtonItem();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValidItem();
     }
 });
 
 $("#txtPrice").on('keyup', function (eventOb) {
-    setButton();
+    setButtonItem();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValidItem();
     }
 });
 
 $("#txtQty").on('keyup', function (eventOb) {
-    setButton();
+    setButtonItem();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkIfValidItem();
     }
 });
 // focusing events end
 
 $("btnItem").attr('disabled', true);
 
-function clearAll() {
+function clearAllItem() {
     $('#txtCode,#txtItemName,#txtPrice,#txtQty').val("");
     $('#txtCode,#txtItemName,#txtPrice,#txtQty').css('border', '2px solid #ced4da');
     $('#txtCode').focus();
@@ -189,7 +189,7 @@ function clearAll() {
     $("#lblitemcode,#lblitemname,#lblitemprice,#lblitemqty").text("");
 }
 
-function formValid() {
+function formValidItem() {
     var itemCode = $("#txtCode").val();
     $("#txtCode").css('border', '2px solid green');
     $("#lblitemcode").text("");
@@ -230,7 +230,7 @@ function formValid() {
     }
 }
 
-function checkIfValid() {
+function checkIfValidItem() {
     var itemCode = $("#txtCode").val();
     if (regExItemCode.test(itemCode)) {
         $("#txtItemName").focus();
@@ -246,7 +246,7 @@ function checkIfValid() {
                     let res = confirm("Do you really need to add this Item..?");
                     if (res) {
                         saveItem();
-                        clearAll();
+                        clearAllItem();
                     }
                 } else {
                     $("#txtQty").focus();
@@ -262,8 +262,8 @@ function checkIfValid() {
     }
 }
 
-function setButton() {
-    let b = formValid();
+function setButtonItem() {
+    let b = formValidItem();
     if (b) {
         $("#btnItem").attr('disabled', false);
     } else {
@@ -272,6 +272,6 @@ function setButton() {
 }
 
 $('#btnItem').click(function () {
-    checkIfValid();
-});*/
+    checkIfValidItem();
+});
 //validation ended
