@@ -32,7 +32,21 @@ header > img{
     width: 150px;
 }
 
-body > header > nav{
+body > header > ul{
+    position: absolute;
+    left: 730px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    /*margin: auto;*/
+    list-style: none;
+    display: -webkit-box;
+    margin: 17px 0px 0px -53px;
+    width: 623px;
+    height: 45px;
+}
+
+/*body > header > nav{
     position: absolute;
     right: 0;
     top: 0;
@@ -49,7 +63,7 @@ body > header > nav > ul{
     bottom: 0;
     list-style: none;
     display: ruby;
-}
+}*/
 
 /*body > header > h1{
     margin: 0;
@@ -63,14 +77,23 @@ body > header > nav > ul{
     cursor: pointer;
 }
 
-body > header > nav > ul > li > a{
+body > header > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+body > header > ul > li > a:hover{
+    color: #fec51c;
+}
+
+/*body > header > nav > ul > li > a{
     text-decoration: none;
     color: white;
 }
 
 body > header > nav > ul > li > a:hover{
     color: #fec51c;
-}
+}*/
 
 main > section:nth-child(1) > #img1{
     width: 100%;
@@ -946,7 +969,95 @@ body > footer > address > .icon{
     left: 0;
 }*/
 
-@media screen and (max-width: 900px){
+/*@media screen and (max-width: 900px){
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    .main-cont{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-cont .box{
+        margin: 5px 0;
+    }
+}*/
+
+@media screen and (max-width: 425px){
+
+    body > header {
+        width: 79%;
+        height: 65px;
+    }
+
+    header > img {
+        width: 56px;
+        margin: 0px 0 0 135px;
+    }
+
+    body > header > ul {
+        left: 15px;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: 33px 0px 0px -46px;
+        width: 320px;
+        height: 27px;
+        font-size: 15px;
+    }
+
+    .list {
+        padding: 0 5px 0 5px;
+        margin: 5px;
+        font-size: 10px;
+    }
+
+    main > section:nth-child(1) > #img1 {
+        width: 79%;
+    }
+
+    main > section:nth-child(1) > #mypic {
+        top: 56px;
+        bottom: 0;
+        left: -30px;
+        right: 0;
+        width: 160px;
+    }
+
+    main > section:nth-child(1) > aside {
+        right: 96px;
+        left: 10px;
+        /* top: 96px; */
+        top: 20px;
+        color: white;
+    }
+
+    main > section:nth-child(1) > aside > h1 {
+        width: 256px;
+        font-size: 15px;
+        margin: auto;
+    }
+
+    main > section:nth-child(1) > aside > h4 {
+        margin-left: -6px;
+        width: 325px;
+        color: #45e5e5;
+        font-size: 10px;
+    }
+
+    main > section:nth-child(1) > aside > pre {
+        width: 195px;
+        font-size: 10px;
+    }
+
+    main > section:nth-child(1) > aside > a {
+        padding: 5px 5px;
+        margin: 8px 0;
+        border-radius: 20px;
+        margin-left: 89px;
+        font-size: 10px;
+    }
+
     footer{
         position: relative;
         bottom: 0px;
