@@ -154,4 +154,5 @@ $("#btnAddToCart").click(function () {
 $("#btnPurch").click(function () {
     PlaceOrder();
     generateOrderID();
+    alert("Your order is confirmed");
 });
