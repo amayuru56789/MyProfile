@@ -5,10 +5,13 @@
 ![Image of Amayuru](assets/images/WhatsApp%20Image%202021-11-07%20at%2010.42.06%20PM.jpeg)
 
 - **Home Page**
-![Home Page Img](assets/ScreenShots/homepage%20img.PNG)
+![Home Page Img](assets/ScreenShots/home_page%20img.PNG)
 
 - **My Skills Section**
 ![Skill Section Img](assets/ScreenShots/skills%20sec.PNG)
+
+- **My Footer**
+  ![Footer Img](assets/ScreenShots/footer%img.PNG)
 
 ## :link: **Links**
 - Website : [avc](https://amayuru5678.000webhostapp.com/)
